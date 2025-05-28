@@ -1,0 +1,332 @@
+body {
+    font-family: 'Times New Roman', Times, serif; /* Fonte similar à da imagem */
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0f0; /* Um cinza bem clarinho */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: flex-start; /* Alinha no topo, pra ficar mais parecido com a imagem */
+    min-height: 100vh; /* Garante que o body ocupe a altura total da viewport */
+    box-sizing: border-box; /* Garante que padding e border não aumentem o tamanho total */
+}
+
+.container {
+    width: 100%; /* Começa com 100% para ser responsivo */
+    max-width: 600px; /* Largura máxima, igual na imagem, para telas maiores */
+    background-color: #ffffff;
+    border: 1px solid #000000; /* Borda preta, fina, para o formulário todo */
+    padding: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    text-align: center; /* Centraliza títulos */
+    box-sizing: border-box; /* Garante que padding e border não aumentem o tamanho total */
+}
+
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+form {
+    text-align: left; /* Conteúdo do formulário alinhado à esquerda */
+}
+
+.section-box {
+    border: 1px solid #000000; /* Borda preta pra cada seção */
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    position: relative;
+    box-sizing: border-box; /* Para responsividade */
+}
+
+.section-box h3 {
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+    padding: 0 5px;
+    background-color: #ffffff;
+    position: absolute;
+    top: -10px;
+    left: 10px;
+}
+
+.form-group {
+    margin-bottom: 5px; /* Espaçamento entre os campos */
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem a linha em telas menores */
+    align-items: baseline;
+}
+
+.form-group label {
+    display: inline-block;
+    width: 150px; /* Largura fixa pra labels em telas maiores */
+    text-align: right;
+    margin-right: 10px;
+    font-size: 13px;
+    box-sizing: border-box;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="number"] { /* Incluído type="number" */
+    flex-grow: 1;
+    border: 1px solid #000000;
+    padding: 2px 4px;
+    font-size: 13px;
+    box-sizing: border-box;
+    min-width: 50px; /* Largura mínima para inputs */
+}
+
+/* Estilos para o grupo de Nascimento */
+.nascimento {
+    display: flex;
+    align-items: center; /* Alinha os elementos verticalmente */
+    flex-wrap: wrap; /* Permite quebra de linha */
+}
+
+.nascimento label {
+    margin-bottom: 0; /* Remove margem inferior para alinhamento */
+}
+
+.nascimento input.date-part {
+    width: 50px; /* Aumenta um pouco a largura */
+    text-align: center;
+    margin-right: 5px;
+    flex-grow: 0; /* Não cresce */
+}
+
+.nascimento .barra {
+    margin-right: 5px;
+    font-size: 13px;
+}
+
+/* Estilos para o grupo de Telefone */
+.telefone {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.telefone label {
+    margin-bottom: 0;
+}
+
+.telefone-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que os inputs quebrem a linha dentro do container */
+    flex-grow: 1; /* Ocupa o restante do espaço */
+}
+
+.telefone-container input {
+    margin-right: 5px; /* Espaçamento entre os campos de telefone */
+}
+
+.telefone-container .ddd-tel {
+    width: 40px; /* Largura fixa para DDD */
+    text-align: center;
+    flex-grow: 0;
+}
+
+.telefone-container .tel-numero {
+    flex-grow: 1; /* Ocupa o restante do espaço disponível */
+    min-width: 80px; /* Largura mínima para o número */
+}
+
+.telefone-container .tel-ramal {
+    width: 60px; /* Largura fixa para ramal */
+    text-align: center;
+    flex-grow: 0;
+}
+
+/* Informações de Matrícula */
+.form-group-inline {
+    margin-bottom: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+.form-group-inline label {
+    margin-right: 10px;
+    font-size: 13px;
+    width: auto;
+    text-align: left;
+}
+
+.form-group-inline select {
+    border: 1px solid #000000;
+    padding: 2px 4px;
+    font-size: 13px;
+    box-sizing: border-box;
+    width: 120px;
+    max-width: 100%;
+}
+
+.form-group-radio,
+.form-group-checkbox {
+    margin-bottom: 5px;
+    font-size: 13px;
+    padding-left: 10px;
+    line-height: 1.3;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.form-group-radio input[type="radio"],
+.form-group-checkbox input[type="checkbox"] {
+    margin-right: 5px;
+    margin-bottom: 2px;
+}
+
+.form-group-radio label,
+.form-group-checkbox label {
+    font-size: 13px;
+}
+
+.buttons {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.buttons button {
+    background-color: #e0e0e0;
+    border: 1px solid #000000;
+    padding: 5px 15px;
+    font-size: 13px;
+    cursor: pointer;
+    margin: 0 5px;
+    border-radius: 0;
+}
+
+.buttons button:hover {
+    background-color: #d0d0d0;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    .form-group label {
+        width: 100%; /* Labels ocupam 100% da largura em telas menores */
+        text-align: left; /* Alinha labels à esquerda */
+        margin-bottom: 5px; /* Espaçamento abaixo da label */
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="number"] {
+        width: 100%; /* Inputs ocupam 100% da largura */
+        flex-grow: 0; /* Desativa o flex-grow para que a largura 100% seja respeitada */
+    }
+
+    /* Ajustes específicos para Nascimento em telas menores */
+    .nascimento {
+        flex-direction: column; /* Coluna em telas menores */
+        align-items: flex-start;
+    }
+    .nascimento label {
+        margin-bottom: 5px;
+    }
+    .nascimento input.date-part {
+        width: calc(33% - 5px); /* Divide em 3 colunas */
+        margin-right: 5px;
+        margin-bottom: 5px; /* Espaçamento entre os campos */
+    }
+    .nascimento .barra {
+        margin-right: 5px;
+        margin-bottom: 5px;
+    }
+
+
+    /* Ajustes específicos para Telefone em telas menores */
+    .telefone {
+        flex-direction: column; /* Coluna em telas menores */
+        align-items: flex-start;
+    }
+    .telefone label {
+        margin-bottom: 5px;
+    }
+    .telefone-container {
+        flex-direction: row; /* Mantém a linha em telas médias, se possível */
+        flex-wrap: wrap;
+        width: 100%; /* Ocupa largura total */
+        justify-content: space-between; /* Espaçamento entre os campos */
+    }
+    .telefone-container input {
+        margin-right: 0; /* Remove margem lateral entre eles se for justificado */
+        margin-bottom: 5px; /* Espaçamento vertical */
+    }
+    .telefone-container .ddd-tel {
+        width: 25%; /* Ajusta largura para DDD */
+    }
+    .telefone-container .tel-numero {
+        width: 45%; /* Ajusta largura para Telefone */
+    }
+    .telefone-container .tel-ramal {
+        width: 25%; /* Ajusta largura para Ramal */
+    }
+
+
+    .form-group-inline,
+    .form-group-radio,
+    .form-group-checkbox {
+        padding-left: 0; /* Remove o recuo em telas menores */
+    }
+
+    .form-group-inline label {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 5px;
+    }
+
+    .form-group-inline select {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    .buttons button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    /* Ajustes para telefone em telas muito pequenas */
+    .telefone-container {
+        flex-direction: column; /* Quebra para colunas em telas muito pequenas */
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    .telefone-container input {
+        width: 100%; /* Ocupa 100% da largura */
+        margin-right: 0;
+    }
+}
