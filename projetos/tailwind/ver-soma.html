@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Soma</title>
+    <script src="/js/ver-soma.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Define a fonte Inter para todo o corpo do documento */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-cyan-500 to-sky-900 min-h-screen flex items-center justify-center p-4">
+    <div class="bg-white p-8 rounded-xl shadow-2xl w-full max-w-md transform transition-all duration-300 hover:scale-105">
+        <h1 class="text-3xl font-extrabold text-gray-800 mb-6 text-center">
+            Verificador de Soma
+        </h1>
+
+        <div class="space-y-4 mb-6">
+            <div>
+                <label for="numero1" class="block text-gray-700 text-sm font-semibold mb-2">
+                    Primeiro Número:
+                </label>
+                <input
+                    type="number"
+                    id="numero1"
+                    placeholder="Digite o 1º número"
+                    class="shadow-sm appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all duration-200"
+                />
+            </div>
+            <div>
+                <label for="numero2" class="block text-gray-700 text-sm font-semibold mb-2">
+                    Segundo Número:
+                </label>
+                <input
+                    type="number"
+                    id="numero2"
+                    placeholder="Digite o 2º número"
+                    class="shadow-sm appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all duration-200"
+                />
+            </div>
+            <div>
+                <label for="numero3" class="block text-gray-700 text-sm font-semibold mb-2">
+                    Terceiro Número:
+                </label>
+                <input
+                    type="number"
+                    id="numero3"
+                    placeholder="Digite o 3º número"
+                    class="shadow-sm appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all duration-200"
+                />
+            </div>
+        </div>
+
+        <button
+            onclick="verificarSoma()"
+            class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg focus:outline-none focus:shadow-outline transition-all duration-200 transform hover:scale-105 active:scale-95 shadow-lg"
+        >
+            Verificar Soma
+        </button>
+
+        <div id="resultadoSoma" class="mt-6 p-4 bg-blue-50 rounded-lg text-blue-800 text-lg font-medium text-center shadow-inner">
+            Digite os números e clique em "Verificar Soma"!
+        </div>
+    </div>
+</body>
+</html>

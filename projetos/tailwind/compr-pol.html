@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polegadas para milimetro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/js/compr-pol.js"></script>
+    <style>
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        input[type="number"] {
+            -moz-appearance: textfield;
+        }</style>
+</head>
+<body class="bg-gradient-to-br from-cyan-500 to-sky-900 min-h-screen flex items-center justify-center p-4">
+    <div class="bg-white/10 border border-white/20 backdrop-filter backdrop-blur-lg p-8 rounded-3xl shadow-2x1 w-full max-w-md text-center">
+        <h1 class="text-3xl font-extrabold text-white mb-6">Conversor de Polegadas para Milímetros</h1>
+        <input
+            type="number"
+            id="polegadasInput"
+            placeholder="Ex: 10"
+            class="bg-white/10 placeholder-white/70 backdrop-blur-lg backdrop-filter w-full px-4 py-3 border border-border-white/20  rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-white text-lg"
+            step="any">
+        <button
+            onclick="converterComprimento()"
+            class="w-full mt-4 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+        >Converter para Milímetros</button>
+        <div class="mt-4 p-4 bg-blue-100 border-l-4 border-blue-500 text-blue-800 rounded-lg">
+            <p class="text-lg font-medium">Resultado:</p>
+            <div id="resultadoDiv" class="mt-2 text-xl font-bold text-blue-900">
+                Aguardando conversão...
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
